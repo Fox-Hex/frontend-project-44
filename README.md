@@ -4,5 +4,4 @@
 
 ### Brain-even session record:
 
-<a href="    https://asciinema.org/a/7BvBnoT00GetFiilrVz1H4lMl
-">asciinema</a>
+<a href="https://asciinema.org/a/7BvBnoT00GetFiilrVz1H4lMl">asciinema</a>
