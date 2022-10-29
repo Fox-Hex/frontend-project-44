@@ -14,7 +14,7 @@ const randomOperand = (array) => {
   return array[i];
 };
 
-const operation = (number1, number2, operationMark) => {
+const operationCalc = (number1, number2, operationMark) => {
   if (operationMark === '+') {
     return number1 + number2;
   }
@@ -27,10 +27,13 @@ const operation = (number1, number2, operationMark) => {
   return null;
 };
 
-const question = (number1, number2, operationMark, userName) => {
-  console.log(`Question: ${number1} ${operationMark} ${number2}`);
-  const answer = readlineSync.question('Your answer: ');
-  const correctAnswer = operation(number1, number2, operationMark);
+const operationGCD = (a, b) => {
+  if (b > a) return operationGCD(b, a);
+  if (!b) return a;
+  return operationGCD(b, a % b);
+};
+
+const checkAnswer = (answer, correctAnswer, userName) => {
   if (Number(answer) === correctAnswer) {
     console.log('Correct!');
     return true;
@@ -39,8 +42,23 @@ const question = (number1, number2, operationMark, userName) => {
   return false;
 };
 
+const questionCalc = (number1, number2, operationMark, userName) => {
+  console.log(`Question: ${number1} ${operationMark} ${number2}`);
+  const answer = readlineSync.question('Your answer: ');
+  const correctAnswer = operationCalc(number1, number2, operationMark);
+  return checkAnswer(answer, correctAnswer, userName);
+};
+
+const questionGCD = (number1, number2, userName) => {
+  console.log(`Question: ${number1} ${number2}`);
+  const answer = readlineSync.question('Your answer: ');
+  const correctAnswer = operationGCD(number1, number2);
+  return checkAnswer(answer, correctAnswer, userName);
+};
+
 export {
-  question,
+  questionGCD,
+  questionCalc,
   welcomeUser,
   randomInt,
   randomOperand,

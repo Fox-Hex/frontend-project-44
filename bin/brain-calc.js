@@ -2,7 +2,7 @@
 
 import {
   welcomeUser,
-  question,
+  questionCalc,
   randomInt,
   randomOperand,
 } from '../src/index.js';
@@ -17,7 +17,7 @@ const calcGame = (steps) => {
     const b = randomInt(10);
     const operands = randomOperand(['+', '-', '*']);
 
-    const answer = question(a, b, operands, userName);
+    const answer = questionCalc(a, b, operands, userName);
     if (answer === false) {
       return;
     }
