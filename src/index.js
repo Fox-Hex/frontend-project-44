@@ -9,6 +9,8 @@ const welcomeUser = () => {
 
 const randomInt = (max) => Math.floor(Math.random() * max);
 
+const randomBetween = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
+
 const randomOperand = (array) => {
   const i = Math.floor(Math.random() * 3);
   return array[i];
@@ -31,6 +33,20 @@ const operationGCD = (a, b) => {
   if (b > a) return operationGCD(b, a);
   if (!b) return a;
   return operationGCD(b, a % b);
+};
+
+const randomProgression = (lengthRandom = 10, startRandom = 10) => {
+  const startNumber = randomInt(startRandom);
+  const step = randomInt(10) + 1;
+  const progression = [startNumber];
+  const length = randomBetween(5, lengthRandom);
+  const hidePosition = randomInt(length);
+  for (let i = 1; i < length; i += 1) {
+    progression.push(startNumber + step * i);
+  }
+  const correctAnswer = progression[hidePosition];
+  progression[hidePosition] = '..';
+  return [progression, correctAnswer];
 };
 
 const checkAnswer = (answer, correctAnswer, userName) => {
@@ -56,10 +72,18 @@ const questionGCD = (number1, number2, userName) => {
   return checkAnswer(answer, correctAnswer, userName);
 };
 
+const questionProgress = (progression, userName) => {
+  console.log(`Question: ${progression[0].join(' ')}`);
+  const answer = readlineSync.question('Your answer: ');
+  return checkAnswer(answer, progression[1], userName);
+};
+
 export {
+  questionProgress,
   questionGCD,
   questionCalc,
   welcomeUser,
   randomInt,
   randomOperand,
+  randomProgression,
 };
