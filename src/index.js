@@ -16,6 +16,14 @@ const randomOperand = (array) => {
   return array[i];
 };
 
+const isPrimeNumber = (number) => {
+  if (number === 1) return false;
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) return false;
+  }
+  return true
+};
+
 const operationCalc = (number1, number2, operationMark) => {
   if (operationMark === '+') {
     return number1 + number2;
@@ -35,6 +43,8 @@ const operationGCD = (a, b) => {
   return operationGCD(b, a % b);
 };
 
+const operationPrime = (number) => isPrimeNumber(number) ? 'yes' : 'no';
+
 const randomProgression = (lengthRandom = 10, startRandom = 10) => {
   const startNumber = randomInt(startRandom);
   const step = randomInt(10) + 1;
@@ -50,7 +60,7 @@ const randomProgression = (lengthRandom = 10, startRandom = 10) => {
 };
 
 const checkAnswer = (answer, correctAnswer, userName) => {
-  if (Number(answer) === correctAnswer) {
+  if (Number(answer) === correctAnswer || answer === correctAnswer) {
     console.log('Correct!');
     return true;
   }
@@ -78,7 +88,15 @@ const questionProgress = (progression, userName) => {
   return checkAnswer(answer, progression[1], userName);
 };
 
+const questionPrime = (number, userName) => {
+  console.log(`Question: ${number}`);
+  const answer = readlineSync.question('Your answer: ');
+  const correctAnswer = operationPrime(number);
+  return checkAnswer(answer, correctAnswer, userName);
+};
+
 export {
+  questionPrime,
   questionProgress,
   questionGCD,
   questionCalc,
