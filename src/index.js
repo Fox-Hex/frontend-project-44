@@ -24,6 +24,13 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
+const operationEven = (number) => {
+  if (number % 2 === 0) {
+    return 'yes';
+  }
+  return 'no';
+};
+
 const operationCalc = (number1, number2, operationMark) => {
   if (operationMark === '+') {
     return number1 + number2;
@@ -68,6 +75,13 @@ const checkAnswer = (answer, correctAnswer, userName) => {
   return false;
 };
 
+const questionEven = (number, name) => {
+  console.log(`Question: ${number}`);
+  const answer = readlineSync.question('Your answer: ');
+  const correctAnswer = operationEven(number);
+  return checkAnswer(answer, correctAnswer, name);
+};
+
 const questionCalc = (number1, number2, operationMark, userName) => {
   console.log(`Question: ${number1} ${operationMark} ${number2}`);
   const answer = readlineSync.question('Your answer: ');
@@ -96,6 +110,7 @@ const questionPrime = (number, userName) => {
 };
 
 export {
+  questionEven,
   questionPrime,
   questionProgress,
   questionGCD,
