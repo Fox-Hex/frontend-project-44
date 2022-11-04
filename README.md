@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/Fox-Hex/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Fox-Hex/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/Fox-Hex/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/08034d267ee2e831e711/maintainability" /></a>
 
-#
+
 ## Description
 My first project on hexlet.
 
@@ -10,7 +10,7 @@ My first project on hexlet.
 
 Language: JavaScript.
 <br><br>
-#
+
 ## Project setup
 - Clone repository.
 
@@ -34,7 +34,7 @@ brain-gcd<br>
 brain-progression<br>
 brain-prime<br>
 <br>
-#
+
 ## Asciinema sessions record:
 
 <a href="https://asciinema.org/a/AcxkclJDyneagXuWvUovJK93Z">brain-even</a>
