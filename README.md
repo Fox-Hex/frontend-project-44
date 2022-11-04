@@ -37,12 +37,12 @@ brain-prime<br>
 #
 ## Asciinema sessions record:
 
-<a href="https://asciinema.org/a/7BvBnoT00GetFiilrVz1H4lMl">brain-even</a>
+<a href="https://asciinema.org/a/AcxkclJDyneagXuWvUovJK93Z">brain-even</a>
 
-<a href="https://asciinema.org/a/7QlroaDG7ECVwLwq9MT0KFx1c">brain-calc</a>
+<a href="https://asciinema.org/a/HOUDMDuwrcmyHK2Zoeqszp3XU">brain-calc</a>
 
-<a href="https://asciinema.org/a/dIUyP261Fx2G6RlvYTBXueykL">brain-gcd</a>
+<a href="https://asciinema.org/a/cEL4bZRABc6ek3XLYfXUVkyYQ">brain-gcd</a>
 
-<a href="https://asciinema.org/a/J4bIQQNxdhnYGOEdolQd8t4bf">brain-progression</a>
+<a href="https://asciinema.org/a/z1GWl4KS6GFejnbapkBF5sblN">brain-progression</a>
 
-<a href="https://asciinema.org/a/Rq50gk72KwWXFYUdofiMVFBSh">brain-prime</a>
+<a href="https://asciinema.org/a/Y1tKCzg4miwGWMdJnyOtrbYzv">brain-prime</a>

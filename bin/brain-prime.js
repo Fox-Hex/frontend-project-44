@@ -18,6 +18,7 @@ const primeGame = (steps) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 primeGame(3);

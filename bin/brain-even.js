@@ -38,6 +38,7 @@ const evenGame = (numbers) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 evenGame([15, 6, 7]);

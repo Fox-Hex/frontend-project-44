@@ -22,6 +22,7 @@ const calcGame = (steps) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 calcGame(3);

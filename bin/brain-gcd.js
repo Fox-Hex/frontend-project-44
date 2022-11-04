@@ -20,6 +20,7 @@ const gcdGame = (steps) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 gcdGame(3);

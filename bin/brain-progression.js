@@ -18,6 +18,7 @@ const progGame = (steps) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 progGame(3);
