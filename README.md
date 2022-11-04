@@ -20,7 +20,7 @@ Language: JavaScript.
 ```bash
 make install
 ```
-- Link package:
+- Link package (could require sudo):
 
 ```
 npm link
