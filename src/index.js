@@ -21,7 +21,7 @@ const isPrimeNumber = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) return false;
   }
-  return true
+  return true;
 };
 
 const operationCalc = (number1, number2, operationMark) => {
@@ -43,7 +43,7 @@ const operationGCD = (a, b) => {
   return operationGCD(b, a % b);
 };
 
-const operationPrime = (number) => isPrimeNumber(number) ? 'yes' : 'no';
+const operationPrime = (number) => (isPrimeNumber(number) ? 'yes' : 'no');
 
 const randomProgression = (lengthRandom = 10, startRandom = 10) => {
   const startNumber = randomInt(startRandom);
