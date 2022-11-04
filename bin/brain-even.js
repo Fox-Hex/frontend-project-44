@@ -8,35 +8,35 @@ console.log(`Hello, ${userName}!`);
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const game = (numbers) => {
-  for (let i = 0; i < numbers.length; i += 1) {
-    console.log(`Question: ${numbers[i]}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === 'yes') {
-      if (numbers[i] % 2 === 0) {
-        console.log('Correct!');
-      } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-        return null;
-      }
-    } else if (answer === 'no') {
-      if (numbers[i] % 2 !== 0) {
-        console.log('Correct!');
-      } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
-        return null;
-      }
-    } else {
-      if (numbers[i] % 2 === 0) {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
-        return null;
-      }
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
-      return null;
-    }
+const checkAnswer = (answer, correctAnswer, userName) => {
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+    return true;
   }
-  return null;
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+  return false;
 };
 
-game([15, 6, 7]);
+const operationEven = (number) => {
+  if (number % 2 === 0) {
+    return 'yes'
+  }
+  return 'no';
+};
+
+const questionEven = (number, userName) => {
+  console.log(`Question: ${number1} ${operationMark} ${number2}`);
+  const answer = readlineSync.question('Your answer: ');
+  const correctAnswer = operationEven(number);
+  return checkAnswer(answer, correctAnswer, userName);
+};
+
+const evenGame = (numbers) => {
+  for (let i = 0; i < numbers.length; i += 1) {
+    const answer = questionEven(numbers[i], userName);
+    if (!answer) {
+      return;
+    }
+};
+
+evenGame([15, 6, 7]);
