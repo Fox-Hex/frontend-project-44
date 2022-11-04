@@ -78,7 +78,7 @@ const checkAnswer = (answer, correctAnswer, userName) => {
 const questionEven = (number1, number2, name) => {
   console.log(`Question: ${number1}`);
   const answer = readlineSync.question('Your answer: ');
-  const correctAnswer = operationEven(number1);
+  const correctAnswer = operationEven(number1, number2);
   return checkAnswer(answer, correctAnswer, name);
 };
 
