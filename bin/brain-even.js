@@ -11,7 +11,7 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const evenGame = (numbers) => {
   for (let i = 0; i < numbers.length; i += 1) {
-    const answer = questionEven(numbers[i], userName);
+    const answer = questionEven(numbers[i], numbers[i], userName);
     if (!answer) {
       return;
     }

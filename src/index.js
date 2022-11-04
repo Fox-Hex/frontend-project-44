@@ -75,10 +75,10 @@ const checkAnswer = (answer, correctAnswer, userName) => {
   return false;
 };
 
-const questionEven = (number, name) => {
-  console.log(`Question: ${number}`);
+const questionEven = (number1, number2, name) => {
+  console.log(`Question: ${number1}`);
   const answer = readlineSync.question('Your answer: ');
-  const correctAnswer = operationEven(number);
+  const correctAnswer = operationEven(number1);
   return checkAnswer(answer, correctAnswer, name);
 };
 
